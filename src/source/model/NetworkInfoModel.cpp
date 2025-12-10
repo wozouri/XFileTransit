@@ -45,7 +45,7 @@ void NetworkInfoListModel::syncNetInfoToUI()
     beginResetModel();
     for (auto &i : ICMPScanner::getInstance().getLocalNetworks())
     {
-        net_info_list.emplace_back(ICMPScanner::getInstance().getIpByCidr(i), i);
+        net_info_list.append(NetworkInfo(ICMPScanner::getInstance().getIpByCidr(i), i));
     }
     endResetModel();
 }

@@ -18,7 +18,7 @@ set(MODEL_HEADERS
     ${CMAKE_CURRENT_SOURCE_DIR}/../../include/model/ModelManager.h
 )
 
-qt_add_library(model STATIC
+add_library(model STATIC
     ${MODEL_SOURCES}
     ${MODEL_HEADERS}
 )
@@ -28,7 +28,7 @@ target_include_directories(model PUBLIC
 )
 
 target_link_libraries(model
-    Qt6::Core
-    Qt6::Network
-    Qt6::Widgets
+    Qt5::Core
+    Qt5::Network
+    Qt5::Widgets
 )

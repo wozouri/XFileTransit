@@ -6,6 +6,7 @@
 #include <QtGui/QIcon>
 #include <QtCore/QDir>
 #include <QtCore/QDirIterator>
+#include <qDebug>
 #include "model/FileIconManager.h"
 #include "control/GlobalStatusManager.h"
 
@@ -78,7 +79,7 @@ private:
   std::pair<int, FileInfo &> findFileInfoById(uint32_t id);
 
 private:
-  QList<FileInfo> file_list;
+  QVector<FileInfo> file_list;
   QHash<uint32_t, QVector<uint32_t>> speed_history;
 };
 

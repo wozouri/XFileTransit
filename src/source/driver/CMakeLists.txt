@@ -24,10 +24,10 @@ set(DRIVER_HEADERS
 
 # Windows 特定的 OpenSSL 设置
 if(WIN32)
-    set(OPENSSL_ROOT_DIR "C:/Program Files/OpenSSL-Win64")
+    set(OPENSSL_ROOT_DIR "D:/Program Files/OpenSSL-Win64")
     set(OPENSSL_INCLUDE_DIR "${OPENSSL_ROOT_DIR}/include")
-    set(OPENSSL_CRYPTO_LIBRARY "${OPENSSL_ROOT_DIR}/lib/VC/x64/MT/libcrypto.lib")
-    set(OPENSSL_SSL_LIBRARY "${OPENSSL_ROOT_DIR}/lib/VC/x64/MT/libssl.lib")
+    set(OPENSSL_CRYPTO_LIBRARY "${OPENSSL_ROOT_DIR}/lib/VC/x64/MD/libcrypto.lib")
+    set(OPENSSL_SSL_LIBRARY "${OPENSSL_ROOT_DIR}/lib/VC/x64/MD/libssl.lib")
     
     if(NOT EXISTS "${OPENSSL_CRYPTO_LIBRARY}")
         message(WARNING "OpenSSL crypto library not found at: ${OPENSSL_CRYPTO_LIBRARY}")

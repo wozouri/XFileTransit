@@ -3,6 +3,10 @@
 
 #include <memory>
 #include <functional>
+#include <string>  
+#include <vector>  
+#include <cstdint> 
+
 #include "driver/interface/SecurityInterface.h"
 
 class OuterMsgParserInterface;
